@@ -59,7 +59,7 @@ for line in feat_info_lines:
                 feature.setdefault(field, []).append(value)
             break
 # store last record if needed
-if feature:
+if feature and "tt_value" in feature.keys():
     if not feature["tt_value"] in feature["tt_setting_name"]:
         print(f"**for feature {feature[tag]} tt_value {feature[tt_value]} does not match any tt_setting_name")
     feat_info[feature["tt_tag"]] = feature
