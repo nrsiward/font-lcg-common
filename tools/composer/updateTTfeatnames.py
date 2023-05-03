@@ -1,8 +1,13 @@
 import xml.etree.ElementTree as ET
-import os, re
+import sys, os, re
+
+if sys.argv[1].lower() != "andika":
+    font = "C"
+else:
+    font = "A"
 
 feat_info_fn = "featureinfo.yaml"
-font = "C"
+# font = "A"
 feat_all_in_fn = "feat_all_composer.xml"
 feat_all_out_fn = "feat_all_composer_yaml.xml"
 feat_map_in_fn = "feature_map.csv"  # can be set to None to disable processing

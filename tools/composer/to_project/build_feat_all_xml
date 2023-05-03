@@ -3,9 +3,9 @@
 
 cp ../../common/source/glyph_data.csv .
 cp ../../common/source/featureinfo.yaml .
-cp ../../results/CharisSIL-Regular.ttf .
-cp ../../results/source/CharisSIL-Regular.map .
+cp ../../results/Andika-Regular.ttf .
+cp ../../results/source/Andika-Regular.map .
 
-python3 ../../common/tools/composer/glyph_data_to_gsi.py
-perl ../../common/tools/composer/composer.pl -f charis -d -m feature_map.csv CharisSIL-Regular.ttf gsi_glyph_data_cdg.xml ../../common/tools/composer/gsi_dfltvars.xml > composer_dbg.log
-python3 ../../common/tools/composer/updateTTfeatnames.py  > updateTTfeatnames.log
+python3 ../../common/tools/composer/glyph_data_to_gsi.py andika
+perl ../../common/tools/composer/composer.pl -f andika -d -m feature_map.csv Andika-Regular.ttf gsi_glyph_data_a.xml ../../common/tools/composer/gsi_dfltvars.xml > composer_dbg.log
+python3 ../../common/tools/composer/updateTTfeatnames.py andika > updateTTfeatnames.log
