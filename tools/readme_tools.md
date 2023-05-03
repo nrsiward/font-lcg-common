@@ -1,3 +1,5 @@
+This file was written before the font-lcg-common repo was created which to be used as submodule in a common/ folder in an LCG font repo. In the font-lcg-common repo, files in to_project/ folders should be copied to parallel folders in the LCG repo and modified for that family. Those scripts typically call scripts in the common/ folder.
+
 Shell scripts are often used to call Python scripts with the needed command lines. Some Python scripts lack command line interfaces and use hard-coded values at the start of the file. Such scripts often use files with standardized names. The shell scripts may copy needed input files from their canonical location to the tools folder.
 
 Glpyh classes specified in classes.xml are used in feax where psfmakefea does not generate classes with all the needed glyphs (historically because of differences in processing order between gdl and ot). Some classes and glpyh names (if that seemed more readable than using classes) are hard-coded in feax.
@@ -8,7 +10,7 @@ Testing is typically done by opening ftml files directly in a browser. Ftml test
 
 Ftml tests exist for encoded characters, APs, features, and small caps. (The small caps test was separated from the features test because it includes so many characters. Other features interacting with the smcp feature are included in the features tests). In order to test the APs against all glyphs (not just the encoded ones), feature (and smcp) tests are generated with each AP type.
 
-Run before building as needed (after glyphs added, features changed, etc.): update_source_ftml
+Run before building as needed (after glyphs added, features changed, etc.) from tools folder: update_source_ftml
 
 update_source_ftml: generates classes.xml, feat_all.xml, and ftml tests
 	make_classes: generates classes.xml by running makeromanclasses.py
