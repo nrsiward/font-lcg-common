@@ -1,0 +1,1 @@
+"second text file to test comitting in ST with detached head" 
