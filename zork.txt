@@ -1,0 +1,1 @@
+"text file to test committing in ST with a detached head" 
